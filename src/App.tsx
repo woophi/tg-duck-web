@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useInitData } from '@tma.js/sdk-react';
+import { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
@@ -6,10 +7,9 @@ import viteLogo from '/vite.svg';
 function App() {
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    Telegram.WebApp.ready();
-    console.debug(Telegram.WebApp.initDataUnsafe);
-  }, []);
+  const initData = useInitData();
+
+  console.debug(initData);
 
   return (
     <>
