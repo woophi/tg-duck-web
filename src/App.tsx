@@ -1,4 +1,4 @@
-import { useInitData } from '@tma.js/sdk-react';
+import { useInitDataRaw } from '@tma.js/sdk-react';
 import { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg';
 function App() {
   const [count, setCount] = useState(0);
 
-  const initData = useInitData();
+  const initData = useInitDataRaw();
 
   console.debug(initData);
 
