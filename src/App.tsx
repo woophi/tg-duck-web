@@ -1,15 +1,15 @@
-import { useInitDataRaw } from '@tma.js/sdk-react';
+import { retrieveLaunchParams } from '@tma.js/sdk-react';
 import { useState } from 'react';
 import './App.css';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 
+const { initDataRaw } = retrieveLaunchParams();
+
 function App() {
   const [count, setCount] = useState(0);
 
-  const initData = useInitDataRaw();
-
-  console.debug(initData);
+  console.debug(initDataRaw);
 
   return (
     <>
