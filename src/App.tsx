@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg';
 const { initDataRaw } = retrieveLaunchParams();
 
 const getPayment = () => {
-  axios.post('http://localhost:3000/api/tg/shop/stars', null, {
+  axios.post('http://192.168.0.143:3000/api/tg/shop/stars', null, {
     headers: {
       Authorization: `Bearer ${initDataRaw}`,
     },
