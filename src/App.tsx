@@ -1,4 +1,4 @@
-import { retrieveLaunchParams } from '@tma.js/sdk-react';
+import { retrieveLaunchParams } from '@telegram-apps/sdk-react';
 import axios from 'axios';
 import './App.css';
 import reactLogo from './assets/react.svg';
