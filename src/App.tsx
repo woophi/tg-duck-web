@@ -1,10 +1,10 @@
-import { retrieveLaunchParams } from '@tma.js/sdk-react';
+import { retrieveLaunchParams } from '@telegram-apps/sdk-react';
 import axios from 'axios';
 import './App.css';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 
-const { initDataRaw } = retrieveLaunchParams();
+const { initDataRaw, ...rest } = retrieveLaunchParams();
 
 const getPayment = () => {
   axios.post('https://gift-api.webapp-project.ru/api/tg/shop/stars', null, {
@@ -16,6 +16,9 @@ const getPayment = () => {
 
 function App() {
   console.debug(initDataRaw);
+  const urlParams = new URLSearchParams(document.location.search);
+  console.debug(urlParams);
+  console.debug('rest', rest);
 
   return (
     <>
