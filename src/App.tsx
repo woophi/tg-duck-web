@@ -1,4 +1,4 @@
-import { retrieveLaunchParams } from '@telegram-apps/sdk-react';
+import { retrieveLaunchParams } from '@tma.js/sdk-react';
 import axios from 'axios';
 import './App.css';
 import reactLogo from './assets/react.svg';
@@ -16,9 +16,7 @@ const getPayment = () => {
 
 function App() {
   console.debug(initDataRaw);
-  const urlParams = new URLSearchParams(document.location.search);
-  console.debug(urlParams);
-  console.debug('rest', rest);
+  console.debug(rest);
 
   return (
     <>
